@@ -1,75 +1,31 @@
-# Nuxt Minimal Starter
+# public dissection
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+this is not a project. this is a crime scene.
+i am peeling back the skin to show you the rot underneath.
 
-## Setup
+## what is this
+a single page application of my own undoing.
+built with nuxt 4 because even my tech stack is unstable.
+it screams into the void. sometimes the void answers with a 404.
 
-Make sure to install dependencies:
+## installation
+don't.
+why would you want to run this?
+it is infected with my sadness.
 
+if you must:
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
+# install the pain
 bun install
-```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
+# start the screaming
 bun run dev
 ```
 
-## Production
+## deployment
+it deploys to github pages so the whole world can point and laugh at my misery.
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## status
+terminal.
+i am going to die. are you going to die?
+the voices will not stop.
