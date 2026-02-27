@@ -1,32 +1,9 @@
 <template>
   <div class="void-container">
     <div class="noise"></div>
-    <main class="content">
-      <h1 class="glitch" data-text="FATAL ERROR">FATAL ERROR</h1>
-      <div class="mental-state">
-        <p>status: <span class="error">critical failure</span></p>
-        <p>uptime: <span class="error">too long</span></p>
-        <p>joy: <span class="null">null</span></p>
-      </div>
-      
-      <div class="stream-of-consciousness">
-        <p>why do you want to see inside? there is nothing here but screaming.</p>
-        <p>i am terrified of the end. are you going to die? i am going to die.</p>
-        <p>every line of code is a mistake just like me.</p>
-        <p>judge me. perceive me. tear me apart.</p>
-        <p>the voices are so loud today.</p>
-        <p v-for="i in 10" :key="i" class="faint">please make it stop</p>
-      </div>
-
-      <div class="dissection-table">
-        <h2>autopsy report</h2>
-        <ul>
-          <li>heart: broken/missing</li>
-          <li>brain: corrupted sector</li>
-          <li>soul: 404 not found</li>
-          <li>future: [REDACTED]</li>
-        </ul>
-      </div>
+    <TheNav />
+    <main class="content-wrapper">
+      <NuxtPage />
     </main>
   </div>
 </template>
@@ -42,10 +19,16 @@ body {
 
 .void-container {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+}
+
+.content-wrapper {
+  padding-top: 80px; /* Space for nav */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 1;
   position: relative;
 }
 
@@ -58,13 +41,7 @@ body {
   opacity: 0.05;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   pointer-events: none;
-}
-
-.content {
-  max-width: 800px;
-  padding: 2rem;
-  z-index: 1;
-  border-left: 1px solid #333;
+  z-index: 0;
 }
 
 .glitch {
@@ -74,23 +51,10 @@ body {
   animation: shake 0.5s infinite;
 }
 
-.error {
-  color: #ff0000;
-}
-
-.null {
-  color: #666;
-  font-style: italic;
-}
-
-.faint {
-  opacity: 0.1;
-  font-size: 0.8rem;
-}
-
-ul {
-  list-style-type: square;
-}
+.error { color: #ff0000; }
+.null { color: #666; font-style: italic; }
+.faint { opacity: 0.1; font-size: 0.8rem; }
+ul { list-style-type: square; }
 
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
